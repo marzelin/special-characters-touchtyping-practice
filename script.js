@@ -1,7 +1,7 @@
-var characters = [];
+var charactersList = [];
 
 for (var i=0; i < 10; i++) {
-  characters.push(i);
+  charactersList.push(i);
 }
 
 function generateRandomString(charactersList, wordLength, stringLength) {
@@ -25,5 +25,5 @@ function getRandomCharacter(charactersList) {
 
 // tests ////////////////////////////////////////////////////////////
 
-console.log(characters);
-console.log(getRandomCharacter(characters));
+console.log(charactersList);
+console.log(getRandomCharacter(charactersList));
