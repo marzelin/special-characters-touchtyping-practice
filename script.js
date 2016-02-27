@@ -4,10 +4,16 @@ for (var i=0; i < 10; i++) {
   charactersList.push(i);
 }
 
-function generateRandomString(charactersList, wordLength, stringLength) {
-  var randomString = '';
-  while (randomString.length < stringLength) {
+function generateRandomString(charactersList, wordLength, numberOfWords) {
+    var randomWords = [];
+  while (randomWords.length < numberOfWords) {
+    var randomWord = generateRandomWord(charactersList, wordLength);
+    randomWords.push(randomWord);
   }
+  
+    var randomString = randomWords.join(' ');
+  
+    return randomString;
 }
 
 function generateRandomWord(charactersList, wordLength) {
@@ -32,3 +38,4 @@ function getRandomCharacter(charactersList) {
 console.log(charactersList);
 console.log(getRandomCharacter(charactersList));
 console.log(generateRandomWord(charactersList, 4));
+console.log(generateRandomString(charactersList, 4, 10));
