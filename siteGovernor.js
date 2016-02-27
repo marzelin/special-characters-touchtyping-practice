@@ -8,13 +8,6 @@ var randomString = stringGenerator.generate(4, 5);
 
 userInput.addEventListener('keyup', showResults);
 
-function logInput(event) {
-    if (event.keyIdentifier === 'Enter') {
-        var inputValue = userInput.value;
-        console.log(inputValue);
-    }
-}
-
 function showResults(event) {
     if (event.keyIdentifier === 'Enter') {
         if (randomString === userInput.value) {
