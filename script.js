@@ -12,9 +12,13 @@ function generateRandomString(charactersList, wordLength, stringLength) {
 
 function generateRandomWord(charactersList, wordLength) {
   var randomWord = '';
+
   for (var i = 0; i < wordLength; i++) {
     var randomCharacter = getRandomCharacter(charactersList);
+    randomWord += randomCharacter;
   }
+
+  return randomWord;
 }
 
 function getRandomCharacter(charactersList) {
@@ -27,3 +31,4 @@ function getRandomCharacter(charactersList) {
 
 console.log(charactersList);
 console.log(getRandomCharacter(charactersList));
+console.log(generateRandomWord(charactersList, 4));
