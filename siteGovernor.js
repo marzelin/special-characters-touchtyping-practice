@@ -5,11 +5,13 @@ var listOfCharacters = [1, 2, 3, 4, 5];
 var stringGenerator = RandomStringGenerator(listOfCharacters);
 var randomString = stringGenerator.generate(4, 10);
 
-userInput.addEventListener('input', logInput);
+userInput.addEventListener('keyup', logInput);
 
 function logInput(event) {
-    var inputValue = userInput.value;
-    console.log(inputValue);
+    if (event.keyIdentifier === 'Enter') {
+        var inputValue = userInput.value;
+        console.log(inputValue);
+    }
 }
 
 
