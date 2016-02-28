@@ -1,14 +1,32 @@
+
+// DOM ELEMENTS ////////////////////////////////////////////////////
+
 var randomWordsContainer = document.querySelector('.js-insert-random-words');
 var userInput = document.querySelector('.js-get-user-response');
-var resultsContainer = document.querySelector('.js-show-results');
+var resultsContainer = document.querySelector('.js-show-results');\
+
+// -----------------------------------------------------------------
+
+
+// RANDOM WORDS ////////////////////////////////////////////////////
 
 var listOfCharacters = [1, 2, 3, 4, 5, 6];
 var wordsGenerator = RandomWordsGenerator(listOfCharacters);
 var randomWords = wordsGenerator.generate(4, 5);
 var spans = transformWordsToSpanElements(randomWords);
-appendSpans(spans, randomWordsContainer);
 
+// -----------------------------------------------------------------
+
+
+// SITE INITIALIZATION /////////////////////////////////////////////
+
+appendSpans(spans, randomWordsContainer);
 userInput.addEventListener('keyup', showResults);
+
+// -----------------------------------------------------------------
+
+
+// HELPER FUNCTIONS ////////////////////////////////////////////////
 
 function showResults(event) {
     if (event.keyIdentifier === 'Enter') {
