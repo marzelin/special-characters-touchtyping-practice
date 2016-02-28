@@ -1,15 +1,13 @@
-function RandomStringGenerator(charactersList) {
+function RandomWordsGenerator(charactersList) {
 
     function generateRandomWords(charactersList, wordLength, numberOfWords) {
         var randomWords = [];
         while (randomWords.length < numberOfWords) {
             var randomWord = generateRandomWord(charactersList, wordLength);
             randomWords.push(randomWord);
-        }
+        }  
     
-        var randomString = randomWords.join(' ');
-    
-        return randomString;
+        return randomWords;
     }
 
     function generateRandomWord(charactersList, wordLength) {
@@ -37,7 +35,7 @@ function RandomStringGenerator(charactersList) {
 // tests ////////////////////////////////////////////////////////////
 
 var listOfCharacters = [1, 2, 3, 4, 5];
-var stringGenerator = RandomStringGenerator(listOfCharacters);
+var stringGenerator = RandomWordsGenerator(listOfCharacters);
 var randomString = stringGenerator.generate(4, 10);
 
 console.log(randomString);
