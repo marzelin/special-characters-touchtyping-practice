@@ -5,7 +5,7 @@ var resultsContainer = document.querySelector('.js-show-results');
 var listOfCharacters = [1, 2, 3, 4, 5, 6];
 var wordsGenerator = RandomWordsGenerator(listOfCharacters);
 var randomWords = wordsGenerator.generate(4, 5);
-var spans = remapWordsToSpanElements(randomWords);
+var spans = transformWordsToSpanElements(randomWords);
 appendSpans(spans, randomWordsContainer);
 
 userInput.addEventListener('keyup', showResults);
@@ -20,7 +20,7 @@ function showResults(event) {
     }
 }
 
-function remapWordsToSpanElements(words) {
+function transformWordsToSpanElements(words) {
     var spans = words.map((word) => {
         var span = document.createElement('span');
         span.textContent = word;
