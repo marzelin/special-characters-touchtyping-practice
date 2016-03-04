@@ -3,7 +3,7 @@
 
 var randomWordsContainer = document.querySelector('.js-insert-random-words');
 var userInput = document.querySelector('.js-get-user-response');
-var resultsContainer = document.querySelector('.js-show-results');\
+var resultsContainer = document.querySelector('.js-show-results');
 
 // -----------------------------------------------------------------
 
