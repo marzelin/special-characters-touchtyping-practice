@@ -16,7 +16,9 @@
     "gulp-load-plugins": "^1.2.0",
     "mocha": "^2.4.5"
   },
-  "dependencies": {},
+  "dependencies": {
+    "express": "^4.13.4"
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/marzelin/special-characters-touchtyping-practice.git"

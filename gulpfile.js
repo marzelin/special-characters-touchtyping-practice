@@ -9,6 +9,6 @@ console.log(config.appJS);
 gulp.task('inject', function () {
   return gulp
     .src(config.index)
-    .pipe($.inject(gulp.src(config.appJS)))
+    .pipe($.inject(gulp.src(config.appJS), {relative: true}))
     .pipe(gulp.dest(config.src));
 });

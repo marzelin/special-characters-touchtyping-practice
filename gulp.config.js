@@ -1,5 +1,5 @@
 module.exports = function () {
-  var src = 'src/';
+  var src = 'src/client/';
   var app = src + 'app/';
 
   var config = {
