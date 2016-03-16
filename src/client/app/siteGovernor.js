@@ -14,6 +14,8 @@ var listOfCharacters = [1, 2, 3, 4, 5, 6];
 var wordsGenerator = RandomWordsGenerator(listOfCharacters);
 var randomWords = wordsGenerator.generate(4, 5);
 var spans = transformWordsToSpanElements(randomWords);
+var currentSpanIndex = 0;
+spans[currentSpanIndex].style.fontSize = '2em';
 
 // -----------------------------------------------------------------
 
@@ -29,11 +31,20 @@ userInput.addEventListener('keyup', showResults);
 // HELPER FUNCTIONS ////////////////////////////////////////////////
 
 function showResults(event) {
-    if (event.keyIdentifier === 'Enter') {
-        if (randomWordsContainer.textContent === userInput.value) {
-        resultsContainer.textContent = 'Good job!';
+    if (event.keyIdentifier === 'U+0020' || event.keyIdentifier === 'Enter') {
+        var currentSpan = spans[currentSpanIndex];
+        if (currentSpan.textContent === userInput.value.trim()) {
+          currentSpan.style.fontSize = '';
+          resultsContainer.textContent = 'Good job!';
+          userInput.value = '';
+          currentSpanIndex += 1;
+          if (currentSpanIndex === spans.length) {
+            resultsContainer.textContent = 'Well done!';
+          } else {
+            spans[currentSpanIndex].style.fontSize = '2em';
+          }
         } else {
-        resultsContainer.textContent = 'Try again!';            
+          resultsContainer.textContent = 'Try again!';
         }
     }
 }
