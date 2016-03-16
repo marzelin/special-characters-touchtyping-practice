@@ -1,12 +1,30 @@
 {
   "name": "special-characters-touchtyping-practice",
   "version": "0.1.0",
-  "description": "",
+  "description": "special characters touchtyping practice",
   "main": "script.js",
   "scripts": {
     "test": "node RandomStringGenerator.js"
   },
   "keywords": [],
-  "author": "",
-  "license": "ISC"
+  "author": "marzelin@gmail.com",
+  "license": "ISC",
+  "devDependencies": {
+    "chai": "^3.5.0",
+    "gulp": "^3.9.1",
+    "gulp-inject": "^3.0.0",
+    "gulp-load-plugins": "^1.2.0",
+    "mocha": "^2.4.5"
+  },
+  "dependencies": {
+    "express": "^4.13.4"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/marzelin/special-characters-touchtyping-practice.git"
+  },
+  "bugs": {
+    "url": "https://github.com/marzelin/special-characters-touchtyping-practice/issues"
+  },
+  "homepage": "https://github.com/marzelin/special-characters-touchtyping-practice#readme"
 }
